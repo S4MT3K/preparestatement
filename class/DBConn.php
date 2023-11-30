@@ -11,13 +11,13 @@ abstract class DBConn
         return new PDO("mysql:host=$servername;dbname=$dbname", $username, $pass);
     }
 
-    public static function fixId() : void
+    public static function fixId(string $class, string $className) : void
     {
         $pdo = DBConn::getConn();
-        $m = new Mitarbeiter();
-        $mArr = $m->getAllMitarbeiterAsObjects();
+        $m = new $class();
+        $mArr = $m->getAllAsObjects();
         $countArr = count($mArr) + 1;
-        $stmt = $pdo->query("ALTER TABLE mitarbeiter auto_increment = {$countArr}");
+        $stmt = $pdo->query("ALTER TABLE $class auto_increment = {$countArr}");
         $stmt->execute();
     }
 }

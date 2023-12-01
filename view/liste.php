@@ -5,6 +5,13 @@
         body {
             background-color: #878787;
         }
+        a {
+            text-decoration: none;
+        }
+        a:visited{
+            text-decoration: none;
+            color: inherit;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport"

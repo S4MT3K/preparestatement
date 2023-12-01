@@ -18,8 +18,6 @@ if ($action === 'showList')
     if ($area === 'mitarbeiter' ? $var = new Mitarbeiter() : $var = new Abteilung())
     {
         $vArr = $var->getAllAsObjects();
-        $vArr = 'HALLO WELT';
-        echo $vArr;
     }
     include 'view/liste.php';
 }

@@ -52,7 +52,6 @@
                     <div style="display: table-cell; padding: 5px"><a href="index.php?action=delete&area=mitarbeiter&id=<?php echo $vArr[$i]->getMitarbeiterId() ?>"><button style="border-radius: 5px">Löschen</button></a></div>
                     <div style="display: table-cell; padding: 5px"><a href="index.php?action=showUpdate&area=mitarbeiter&id=<?php echo $vArr[$i]->getMitarbeiterId() ?>"> <button style="border-radius: 5px">Ändern</button></a></div>
                 </div>
-                </div>
         <?php }
         }
         else
@@ -64,6 +63,7 @@
             <a href="index.php?action=showList&area=mitarbeiter">
                 <button style="border-radius: 5px">Zeige Mitarbeiter</button>
             </a>
+            <br>
             <br>
             <div style="display: table; width: fit-content">
                 <div style="display: table-row">
@@ -77,8 +77,6 @@
                     <div style="display: table-cell; padding: 5px"><a href="index.php?action=delete&area=abteilung&id=<?php echo $vArr[$i]->getId() ?>"><button style="border-radius: 5px">Löschen</button></a></div>
                     <div style="display: table-cell; padding: 5px"><a href="index.php?action=showUpdate&area=abteilung&id=<?php echo $vArr[$i]->getId() ?>"> <button style="border-radius: 5px">Ändern</button></a></div>
                 </div>
-            </div>
-
         <?php }
         } ?>
 <?php

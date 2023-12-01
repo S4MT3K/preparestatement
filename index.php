@@ -7,7 +7,7 @@ spl_autoload_register(function ($className) {
 $action = ($_REQUEST['action'] ?? 'showList'); // Startseite
 //$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : 'showList'; //Ternärer Operator also dieser Doppelpuinkt
 $id = ($_REQUEST['id'] ?? '');
-$area = ($_REQUEST['area'] ?? 'mitarbeiter');
+$area = ($_REQUEST['area'] ?? 'abteilung');
 $vorname = ($_POST['vorname'] ?? '');
 $nachname = ($_POST['nachname'] ?? '');
 $name = ($_POST['name'] ?? '');
@@ -18,6 +18,8 @@ if ($action === 'showList')
     if ($area === 'mitarbeiter' ? $var = new Mitarbeiter() : $var = new Abteilung())
     {
         $vArr = $var->getAllAsObjects();
+        $vArr = 'HALLO WELT';
+        echo $vArr;
     }
     include 'view/liste.php';
 }

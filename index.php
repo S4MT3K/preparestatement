@@ -5,7 +5,7 @@ spl_autoload_register(function ($className) {
 //Variablen Empfang
 //Null Coalacing Operator (??)
 $action = ($_REQUEST['action'] ?? 'showList'); // Startseite
-//$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : 'showList'; //Ternärer Operator also dieser Doppelpuinkt
+//$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : 'showList'; //Ternärer Operator also dieser Doppelpunkt
 $id = ($_REQUEST['id'] ?? '');
 $area = ($_REQUEST['area'] ?? 'abteilung');
 $vorname = ($_POST['vorname'] ?? '');
